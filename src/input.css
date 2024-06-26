@@ -1,0 +1,159 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.navbar-fixed {
+    @apply fixed z-[9999];
+    transition: box-shadow 0.5s ease; /* Tambahkan transisi */
+    @apply bg-white
+}
+
+.nav-link {
+    @apply text-base text-white py-2 mx-8 flex;
+}
+
+.nav-link:hover {
+    @apply text-white;
+}
+
+@media (max-width: 640px) {
+    .nav-link:hover {
+        @apply text-black;
+    }
+}
+
+@screen sm {
+    .nav-link:hover {
+        @apply text-black;
+    }
+}
+
+@screen md {
+    .nav-link:hover {
+        @apply text-white;
+    }
+}
+
+@screen lg {
+    .nav-link:hover {
+        @apply text-white;
+    }
+}
+
+.text-scrolled {
+    @apply text-black;
+}
+
+.text-scrolled:not(#logo-text):hover {
+    @apply text-sky-500;
+}
+
+.shadow-on-scroll {
+    /* box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.1); */
+    box-shadow: 3px 3px 3px 3px rgba(1, 1, 1, 0.2);
+}
+
+.hamburger-line {
+    @apply w-[30px] h-[2px] my-2 block bg-white;
+}
+
+.hamburger-line-scrolled {
+    @apply bg-black;
+}
+
+.hamburger-active > span:nth-child(1) {
+    @apply origin-top-left rotate-45;
+}
+
+.hamburger-active > span:nth-child(2) {
+    @apply scale-0;
+}
+
+.hamburger-active > span:nth-child(3) {
+    @apply -rotate-45;
+}
+
+.swiper-container {
+    width: 100%;
+    overflow: hidden;
+    padding-bottom: 30px; /* Tambahkan padding bawah agar pagination tidak menimpa konten */
+}
+
+.swiper-slide {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.testimonial-card {
+    max-width: 600px;
+    margin: auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+}
+
+.testimonial-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 20px;
+}
+
+.testimonial-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Styling untuk swiper pagination */
+.swiper-pagination {
+    position: absolute;
+    bottom: 10px; /* Atur posisi pagination ke bawah */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
+    background-color: #bbb;
+    opacity: 0.5;
+    margin: 0 5px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #2196f3;
+    opacity: 1;
+}
+
+ul.checklist {
+    list-style: none;
+    padding: 0;
+}
+
+ul.checklist li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 10px;
+}
+
+ul.checklist li::before {
+    content: '✔'; 
+    position: absolute;
+    left: 0;
+    color: green;
+    font-size: 20px;
+    top: 0;
+}
