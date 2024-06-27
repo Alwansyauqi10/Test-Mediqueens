@@ -13,34 +13,34 @@ body {
 }
 
 .nav-link {
-    @apply text-base text-white py-2 mx-8 flex;
+    @apply text-base text-black py-2 mx-8 flex;
 }
 
 .nav-link:hover {
-    @apply text-white;
+    @apply text-sky-500 transition ease-in-out duration-300;
 }
 
 @media (max-width: 640px) {
     .nav-link:hover {
-        @apply text-black;
+        @apply text-sky-500 transition ease-in-out duration-300;
     }
 }
 
 @screen sm {
     .nav-link:hover {
-        @apply text-black;
+        @apply text-sky-500 transition ease-in-out duration-300;
     }
 }
 
 @screen md {
     .nav-link:hover {
-        @apply text-white;
+        @apply text-sky-500 transition ease-in-out duration-300;
     }
 }
 
 @screen lg {
     .nav-link:hover {
-        @apply text-white;
+        @apply text-sky-500 transition ease-in-out duration-300;
     }
 }
 
@@ -49,7 +49,7 @@ body {
 }
 
 .text-scrolled:not(#logo-text):hover {
-    @apply text-sky-500;
+    @apply text-sky-500 transition ease-in-out duration-300;
 }
 
 .shadow-on-scroll {
