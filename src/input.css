@@ -16,6 +16,13 @@ body {
     @apply text-base text-black py-2 mx-8 flex;
 }
 
+
+@media (min-width: 768px) {
+    .nav-link {
+        @apply text-white;
+    }
+}
+
 .nav-link:hover {
     @apply text-sky-500 transition ease-in-out duration-300;
 }
